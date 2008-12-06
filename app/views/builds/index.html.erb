@@ -1,0 +1,7 @@
+<h1>Timeline</h1>
+
+<ul>
+  <%- @builds.each do |build| -%>
+    <li><%= build.name %> - <%= build.state %></li>
+  <%- end -%>
+</ul>
