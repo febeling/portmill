@@ -1,7 +1,22 @@
-<h1>Timeline</h1>
+<h1>Latest builds</h1>
 
-<ul>
+<table class="resultlist">
+  <tr class="property">
+    <th>Port</th>
+    <th>State</th>
+    <th>Revison</th>
+    <th>Time</th>
+    <th>CPU</th>
+    <th>OS</th>
+  </tr>
   <%- @builds.each do |build| -%>
-    <li><%= build.name %> - <%= build.state %></li>
+  <tr class="resultentry">
+    <td><%= build.name %></td>
+    <td><span class="<%= build.state %>"><%= build.state %></span></td>
+    <td><%= build.revision %></td>
+    <td><%= build.time %></td>
+    <td><%= build.cpu %></td>
+    <td><%= build.os %></td>
+  </tr>
   <%- end -%>
-</ul>
+</table>

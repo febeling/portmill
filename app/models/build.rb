@@ -3,6 +3,10 @@ class Build
   
   property :name
   property :state
+  property :cpu
+  property :revision
+  property :os
+  property :time
   
-  view :timeline, :key => :time, :properties => [:name, :state]
+  view :timeline, :key => :time, :properties => [:name, :state, :cpu, :revision, :os, :time]
 end

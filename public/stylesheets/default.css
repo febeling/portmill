@@ -1,0 +1,31 @@
+body { 
+    background-color: #fff;
+    color: #666;
+    text-align: left;
+    font-family: arial, sans-serif;
+    margin: 1em;
+}
+h1 {
+    font-size: 120%;
+    color: #999;
+    line-height: 1.0em;
+}
+#logo { color: #666; }
+#claim { color: #999; }
+h2 {
+    font-size: 120%;
+    color: #999;
+    line-height: 1.0em;
+}
+td, th {
+    border-top: 1pt solid #666;
+    border-bottom: 1pt solid #666;
+    padding-top: 0.6em;
+    padding-bottom: 0.4em;
+    padding-right: 0.8em;
+}
+.fail { background: #faa; }
+.success { background: #afa; }
+table {
+    border-collapse: collapse;
+}
