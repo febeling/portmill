@@ -8,5 +8,5 @@ class Build
   property :os
   property :time
   
-  view :timeline, :key => :time, :properties => [:name, :state, :cpu, :revision, :os, :time]
+  view :timeline, :key => :time, :properties => [:name, :state, :cpu, :revision, :os, :time], :descending => true
 end
