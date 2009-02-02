@@ -1,0 +1,25 @@
+<h1>Build details</h1>
+
+<table class="details">
+  <tr>
+    <td>Name</td><td><%= @build.name %></td>
+  </tr>
+  <tr>
+    <td>Build state</td><td><%= @build.state %></td>
+  </tr>
+  <tr>
+    <td>Revision</td><td><%= @build.revision %></td>
+  </tr>
+  <tr>
+    <td>Time</td><td><%= @build.time %></td>
+  </tr>
+  <tr>
+    <td>CPU</td><td><%= @build.cpu %></td>
+  </tr>
+  <tr>
+    <td>OS Version</td><td><%= @build.os %></td>
+  </tr>
+</table>
+<% unless @build.log.nil? %>
+<pre><%= @build.log %></pre>
+<% end %>
