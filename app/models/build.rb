@@ -7,6 +7,7 @@ class Build
   property :revision
   property :os
   property :time
+  property :log
   
   view :timeline, :key => :time, :properties => [:name, :state, :cpu, :revision, :os, :time], :descending => true
 end
