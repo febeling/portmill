@@ -12,7 +12,11 @@
   <%- @builds.each do |build| -%>
   <tr class="resultentry">
     <td><%= build.name %></td>
-    <td><span class="<%= build.state %>"><%= build.state %></span></td>
+    <% if build.state == "fail" -%>
+    <td><span class="fail"><%= link_to "fail", :action => :show, :id => build.id %></span></td>
+    <% else -%>
+    <td><span class="success">success</span></td>
+    <% end -%>
     <td><%= build.revision %></td>
     <td><%= build.time %></td>
     <td><%= build.cpu %></td>

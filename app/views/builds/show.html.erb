@@ -21,5 +21,7 @@
   </tr>
 </table>
 <% unless @build.log.nil? %>
-<pre><%= @build.log %></pre>
+<div class="log">
+  <pre><%= @build.log %></pre>
+</div>
 <% end %>
