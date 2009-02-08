@@ -1,5 +1,9 @@
+<div id="nav">
+  <ul>
+    <li><a href="#">Timeline</a></li><li><a href="#">Category</a></li><li><a href="#">Name</a></li><li><a href="#">Maintainer</a></li>
+  </ul>
+</div>
 <h1>Paged builds</h1>
-
 <table class="resultlist">
   <tr class="property">
     <th>Port</th>
@@ -8,9 +12,7 @@
     <th>Time</th>
     <th>CPU</th>
     <th>OS</th>
-  </tr>
-  <%- @builds.each do |build| -%>
-  <tr class="resultentry">
+  </tr><%- @builds.each do |build| -%><tr class="resultentry">
     <td><%= build.name %></td>
     <% if build.state == "fail" -%>
     <td><span class="fail"><%= link_to "fail", :action => :show, :id => build.id %></span></td>
@@ -21,8 +23,5 @@
     <td><%= build.time %></td>
     <td><%= build.cpu %></td>
     <td><%= build.os %></td>
-  </tr>
-  <%- end -%>
-</table>
-
+  </tr><%- end -%></table>
 <%= will_paginate @builds %>

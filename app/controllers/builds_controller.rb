@@ -1,9 +1,9 @@
 class BuildsController < ApplicationController
 
-#  protect_from_forgery :only => [:update, :destroy]   
+  protect_from_forgery :only => [:update, :destroy]   
   
   def index
-    @builds = Build.paginate(params[:page] || 1, 5, :order => :time, :class => nil, :descending => true)
+    @builds = Build.paginate(params[:page] || 1, 10, :order => :time, :class => nil, :descending => true)
   end
 
   def show
