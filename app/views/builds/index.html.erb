@@ -3,7 +3,7 @@
     <li><a href="#">Timeline</a></li><li><a href="#">Category</a></li><li><a href="#">Name</a></li><li><a href="#">Maintainer</a></li>
   </ul>
 </div>
-<h1>Paged builds</h1>
+<h1>Timeline</h1>
 <table class="resultlist">
   <tr class="property">
     <th>Port</th>
@@ -13,15 +13,15 @@
     <th>CPU</th>
     <th>OS</th>
   </tr><%- @builds.each do |build| -%><tr class="resultentry">
-    <td><%= build.name %></td>
+    <td><div class="revisioncol"><%= build.name %></div></td>
     <% if build.state == "fail" -%>
-    <td><span class="fail"><%= link_to "fail", :action => :show, :id => build.id %></span></td>
+    <td><div class="revisioncol"><span class="fail"><%= link_to "fail", :action => :show, :id => build.id %></span></div></td>
     <% else -%>
-    <td><span class="success">success</span></td>
+    <td><div class="revisioncol"><span class="success">success</span></div></td>
     <% end -%>
-    <td><%= build.revision %></td>
-    <td><%= build.time %></td>
-    <td><%= build.cpu %></td>
-    <td><%= build.os %></td>
+    <td><div class="revisioncol"><%= build.revision %></div></td>
+    <td><div class="revisioncol"><%= build.time %></div></td>
+    <td><div class="revisioncol"><%= build.cpu %></div></td>
+    <td><div class="revisioncol"><%= build.os %></div></td>
   </tr><%- end -%></table>
 <%= will_paginate @builds %>

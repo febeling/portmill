@@ -5,11 +5,13 @@ margin: 0;
 /* div {border: solid 1px red;} */
 h1 {
 font-size: 100%;
+color: #888;
+font-weight: normal;
 }
 #header {
 padding: 1.6em 3em 0.1em 3em;
-background: #888888;
 color: #e3dfdf;
+background: #888888;
 margin: 0;
 }
 #logo {
@@ -36,15 +38,15 @@ padding: 1em 3em 1em 3em;
 }
 #nav a:link, #nav a:visited
 {
-color: #fff;
+color: #888;
 text-decoration: none;
 }
 #nav a:hover
 {
-color: #fff;
+color: #888;
 background-color: #bbb;
 text-decoration: none;
-border-bottom: 3px solid #888;
+border-bottom: 1px dotted #900;
 }
 
 
@@ -57,7 +59,7 @@ background: #e3dfdf;
 }
 a {
 text-decoration: none;
-color: #666;
+color: #888;
 }
 a:hover {
 text-decoration: underline;
@@ -65,16 +67,15 @@ text-decoration: underline;
 h2 {
 font-size: 120%;
 font-weight: normal;
-color: #999;
+color: #888;
 line-height: 1.0em;
 }
 td, th {
-border-top: 1pt solid #666;
-border-bottom: 1pt solid #666;
-padding-top: 0.6em;
-padding-bottom: 0.4em;
-padding-right: 0.8em;
+border-top: 1pt dotted #888;
+border-bottom: 1pt dotted #888;
+padding: 0.5em 0.8em 0.5em 0.1em;
 }
+th {font-weight: normal;}
 .fail {  }
 .success {  }
 table {
@@ -94,4 +95,5 @@ padding: 0 8pt 0 8pt;
 .pagination a {
 border: solid #ccc 1px;
 background: #eee;
+
 }
