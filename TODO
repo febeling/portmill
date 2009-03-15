@@ -1,0 +1,16 @@
+
+- filter by
+  - timeline
+  - maintainer
+  - category
+  - fails
+  - timeline of one port / by name
+
+- syntax hilite log
+- help
+- build history visualization
+
+
+- build clients and auth
+- dot rdeps graph per port
+

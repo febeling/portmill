@@ -49,11 +49,10 @@ text-decoration: none;
 border-bottom: 1px dotted #900;
 }
 
-
 #content {
 border: 0;
 padding: 0.1px 3em 5pt 3em;
-margin: 0;
+margin: 0 ;
 color: #888;
 background: #e3dfdf;
 }
@@ -80,19 +79,13 @@ font-weight: normal;
 text-align: left;
 }
 
-#content table div {overflow: hidden;white-space:nowrap;}
+#content table div {overflow: hidden; white-space:nowrap;}
 
-div.namecol {width: 12em;}
-div.statecol {width: 6em;} 
-div.statecol span.fail a {color: #700;}
-div.statecol span.success {color: #080;}
-div.revisioncol {width: 6em;}
-div.timecol {width: 12em;}
-div.cpucol {width: 6em;}
-div.oscol {width: 6em;}
+div.widecol {width: 12em;}
+div.narrowcol {width: 6em;} 
+div span.fail a {color: #b65423;}
+div span.success {color: #63755d;}
 
-.fail {  }
-.success {  }
 table {
 border-collapse: collapse;
 }
@@ -109,5 +102,4 @@ padding: 0 8pt 0 8pt;
 .pagination a {
 border: solid #ccc 1px;
 background: #eee;
-
 }
