@@ -1,3 +1,0 @@
-[submodule "vendor/plugins/couch_potato"]
-	path = vendor/plugins/couch_potato
-	url = git://github.com/febeling/couch_potato.git
