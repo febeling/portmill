@@ -29,11 +29,12 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem 'mislav-will_paginate', :version => '~> 2.3', :lib => 'will_paginate', :source => 'http://gems.github.com'
+  config.gem 'couch_potato', :version => '>= 0.1.1'
   
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
   # :all can be used as a placeholder for all plugins not explicitly named
-  config.plugins = [ :couch_potato, :all ]
+  config.plugins = [ :all ]
 
   # Add additional load paths for your own custom dirs
   # config.load_paths += %W( #{RAILS_ROOT}/extras )

@@ -23,3 +23,19 @@ namespace :passenger do
 end
 
 after :deploy, "passenger:restart"
+
+# aptitude libxml2
+# aptitude libxml2-dev
+# aptitude install libxslt-dev
+# gem cucumber
+# gem rspec
+# gem spicycode-rcov
+# gem syntax
+# gem hoe
+# gem rspec-rails
+# gem webrat
+# gem json
+# gem jchris-couchrest
+# gem validatable
+# gem mislav-will_paginate
+# gem febeling-couch_potato
