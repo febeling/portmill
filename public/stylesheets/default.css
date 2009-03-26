@@ -1,61 +1,28 @@
 body { 
-font-family: "Helvetica Neue", arial, sans-serif;
+font-family: futura, helvetica, arial, sans-serif;
 margin: 0;
 }
 /* div {border: solid 1px red;} */
 h1 {
 font-size: 100%;
-color: #888;
 font-weight: normal;
 }
 #header {
 padding: 1.6em 3em 0.1em 3em;
 color: #e3dfdf;
-background: #888888;
+background: #888;
 margin: 0;
 }
 #logo {
 font: 220% Didot;
-color: #e3dfdf;
+color: #fff;
 }
-
-div#nav {
-padding: 1em 0 1em 0;
-}
-#nav ul {
-margin: 0;
-padding: 0;
-white-space: nowrap;
-}
-#nav li {
-margin: 0;
-padding: 0;
-display: inline;
-list-style-type: none;
-}
-
-#nav a {
-padding: 1em 3em 1em 3em;
-}
-#nav a:link, #nav a:visited
-{
-color: #888;
-text-decoration: none;
-}
-#nav a:hover
-{
-color: #888;
-background-color: #bbb;
-text-decoration: none;
-border-bottom: 1px dotted #900;
-}
-
 #content {
-border: 0;
+border-bottom: 7px solid #bbb;
 padding: 1px 3em 5pt 3em;
 margin: 0;
-color: #888;
-background: #e3dfdf;
+color: #555;
+background: #fff;
 }
 a {
 text-decoration: none;
