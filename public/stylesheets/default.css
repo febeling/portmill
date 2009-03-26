@@ -16,6 +16,7 @@ margin: 0;
 }
 #logo {
 font: 220% Didot;
+color: #e3dfdf;
 }
 
 div#nav {
@@ -51,8 +52,8 @@ border-bottom: 1px dotted #900;
 
 #content {
 border: 0;
-padding: 0.1px 3em 5pt 3em;
-margin: 0 ;
+padding: 1px 3em 5pt 3em;
+margin: 0;
 color: #888;
 background: #e3dfdf;
 }

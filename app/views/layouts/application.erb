@@ -10,7 +10,9 @@
   <body>
     <div>
       <div id="header">
-	<div id="logo"><img src="/images/mill20.jpg"/> Portmill</div>
+	<% link_to :controller => "builds", :action => "index" do %>
+	  <div id="logo"><img src="/images/mill20.jpg"/> Portmill</div>
+	<% end %>
       </div>
       <div id="content"><%= yield -%></div>
     </div>
