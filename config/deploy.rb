@@ -24,9 +24,9 @@ end
 
 after :deploy, "passenger:restart"
 
-# aptitude libxml2
-# aptitude libxml2-dev
-# aptitude install libxslt-dev
+# apt libxml2
+# apt libxml2-dev
+# apt install libxslt-dev
 # gem cucumber
 # gem rspec
 # gem spicycode-rcov
