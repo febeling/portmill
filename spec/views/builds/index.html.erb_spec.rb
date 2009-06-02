@@ -2,11 +2,12 @@ require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper')
 
 describe "/builds/index" do
   before(:each) do
+    builds = mock("paged_array", :total_pages => 1, :each => nil)
+    assigns[:builds] = builds
     render 'builds/index'
   end
   
-  #Delete this example and add some real ones or delete this file
   it "should tell you where to find the file" do
-    response.should have_tag('p', %r[Find me in app/views/builds/index])
+    response.should have_tag('div', /Timeline/)
   end
 end
