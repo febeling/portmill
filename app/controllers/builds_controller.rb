@@ -12,12 +12,16 @@ class BuildsController < ApplicationController
     else
       redirect_to :action => 'index'
     end
+  rescue Errno::ECONNREFUSED
+    render :text => "Database: connection refused"
   end
 
   def create
     build = Build.json_create(JSON.parse(request.body.read))
     build.save!
     render :json => build
+  rescue Errno::ECONNREFUSED # TODO test
+    render :text => "Database: connection refused"
   end
 
   def ping
