@@ -72,6 +72,7 @@ describe BuildsController do
     it "create response" do
       get :feed
       response.should be_success
+      assigns[:builds].should_not be_nil
     end
 
     it "set content type" do

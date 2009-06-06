@@ -7,7 +7,7 @@ class BuildsController < ApplicationController
   end
 
   def feed
-    @articles = Build.paginate(1, 10, :order => :time, :class => nil, :descending => true)
+    @builds = Build.paginate(1, 10, :order => :time, :class => nil, :descending => true)
     response.content_type = "application/rss+xml"
     render :action => "feed", :layout => false
   end
