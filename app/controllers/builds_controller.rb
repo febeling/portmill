@@ -20,7 +20,7 @@ class BuildsController < ApplicationController
     build = Build.json_create(JSON.parse(request.body.read))
     build.save!
     render :json => build
-  rescue Errno::ECONNREFUSED # TODO test
+  rescue Errno::ECONNREFUSED
     render :text => "Database: connection refused"
   end
 

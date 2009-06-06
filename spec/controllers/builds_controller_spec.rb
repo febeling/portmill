@@ -18,14 +18,29 @@ describe BuildsController do
   end
 
   describe "couchdb connection refused exception" do
-    before do
-      Build.stub!(:find).and_raise(Errno::ECONNREFUSED)
+    describe "on /show" do
+      before do
+        Build.stub!(:find).and_raise(Errno::ECONNREFUSED)
+      end
+      
+      it "renders an error message" do
+        get :show, :id => "35340"
+        response.should be_success
+        response.should have_text("Database: connection refused")
+      end
     end
 
-    it "renders an error text" do
-      get :show, :id => "35340"
-      response.should be_success
-      response.should have_text("Database: connection refused")
+    describe "on /create" do
+      before do
+        JSON.stub!(:parse)
+        Build.stub!(:json_create).and_raise(Errno::ECONNREFUSED)
+      end
+      
+      it "renders an error message" do
+        put :create, :post => { :body => nil }
+        response.should be_success
+        response.should have_text("Database: connection refused")
+      end
     end
   end
 
