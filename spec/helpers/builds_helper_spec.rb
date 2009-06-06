@@ -3,7 +3,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe BuildsHelper do
   describe "link_to_revision" do
     it "renders a link to a macports svn revision" do
-      helper.link_to_revision(8735).should == "<a href='http://trac.macports.org/changeset/8735'>[8735]</a>"
+      helper.link_to_revision(8735).should == "<a href='http://trac.macports.org/changeset/8735'>8735</a>"
     end
   end
 
