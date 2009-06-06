@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Language" content="en-us" />
     <title>Portmill</title>
     <%= stylesheet_link_tag "default" %>
+    <%= auto_discovery_link_tag(:rss, :controller => 'builds', :action => 'feed') %>
   </head>
   <body>
     <div>
