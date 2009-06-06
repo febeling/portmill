@@ -15,7 +15,7 @@ describe "/builds/feed" do
   end
   
   it "should create description" do
-    response.should have_tag('description', 'Result: success')
+    response.should have_tag('description', /Change in revision/)
   end
 
   it "should have rss structure" do
