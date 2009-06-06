@@ -30,3 +30,14 @@ describe "/builds/feed" do
     end
   end
 end
+
+describe "description partial with failed build" do
+  before do
+    @build = mock("build", :name => "build-name", :state => "fail", :revision => 100, :id => 200)
+    render :partial => "builds/description", :locals => { :build => @build }
+  end
+
+  it "should render link to log" do
+    response.body.should match(/href="\/builds\/show\/200"/)
+  end
+end
