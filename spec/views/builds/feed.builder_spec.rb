@@ -4,7 +4,7 @@ describe "/builds/feed" do
   before(:each) do
     builds = []
     10.times do |n|
-      builds << mock("build-#{n}", :name => "build-name-#{n}", :state => "success", :revision => 100 + n, :id => 200 + n)
+      builds << mock("build-#{n}", :name => "build-name-#{n}", :state => "success", :revision => (100 + n).to_s, :id => (200 + n).to_s)
     end
     assigns[:builds] = builds
     render 'builds/feed.builder'
@@ -15,7 +15,7 @@ describe "/builds/feed" do
   end
   
   it "should create description" do
-    response.should have_tag('description', /Change in revision/)
+    response.should have_tag('description', /Changes in revision/)
   end
 
   it "should have rss structure" do
@@ -33,7 +33,7 @@ end
 
 describe "description partial with failed build" do
   before do
-    @build = mock("build", :name => "build-name", :state => "fail", :revision => 100, :id => 200)
+    @build = mock("build", :name => "build-name", :state => "fail", :revision => '100', :id => 200)
     render :partial => "builds/description", :locals => { :build => @build }
   end
 

@@ -15,7 +15,7 @@
 <% else -%>
     <td><div class="narrowcol"><span class="success">success</span></div></td>
 <% end -%>
-    <td><div class="narrowcol"><%= build.revision %></div></td>
+    <td><div class="narrowcol"><%= linked_revision_list(build.revision) %></div></td>
     <td><div class="widecol"><%= build.time %></div></td>
     <td><div class="narrowcol"><%= build.cpu %></div></td>
     <td><div class="narrowcol"><%= build.os %></div></td>
