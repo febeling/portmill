@@ -1,0 +1,8 @@
+<div>
+Change in revision(s) <%= build.revision %> results in: <%= build.state -%>
+<% if build.state == 'fail' %>
+ (see <%= link_to 'build log', :controller => 'builds', :action => 'show', :id => build.id %>).
+<% else -%>
+.
+<% end -%>
+</div>
