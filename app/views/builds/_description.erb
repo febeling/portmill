@@ -1,5 +1,5 @@
 <div>
-Change in revision(s) <%= build.revision %> results in: <%= build.state -%>
+Change in revision(s) <%= build.revision %> <%= if build.state == 'fail' then 'succeeded' else 'failed' end -%>
 <% if build.state == 'fail' %>
  (see <%= link_to 'build log', :controller => 'builds', :action => 'show', :id => build.id %>).
 <% else -%>
