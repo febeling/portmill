@@ -17,7 +17,7 @@ describe BuildsController do
     end
   end
 
-  describe "couchdb connection refused exception" do
+  describe "handles CouchDB connection refused exception" do
     describe "on /show" do
       before do
         Build.stub!(:find).and_raise(Errno::ECONNREFUSED)
@@ -59,4 +59,25 @@ describe BuildsController do
       response.should have_text("Ok")
     end
   end
+
+  describe "feed action" do
+    before do
+      builds = []
+      10.times do
+        builds << mock_model(Build)
+      end
+      Build.should_receive(:paginate).with(1,10,an_instance_of(Hash)).and_return(builds)
+    end
+
+    it "create response" do
+      get :feed
+      response.should be_success
+    end
+
+    it "set content type" do
+      get :feed
+      response.headers["type"].should match(/application\/rss\+xml/)
+    end
+  end
+
 end
