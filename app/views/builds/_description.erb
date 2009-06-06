@@ -1,5 +1,5 @@
 <div>
-Changes in revision(s) <%= linked_revision_list(build.revision) %> <%= if build.state == 'fail' then 'succeeded' else 'failed' end -%>
+Changes in revision(s) <%= linked_revision_list(build.revision) %> <%= if build.state == 'fail' then 'failed' else 'succeeded' end -%>
 <% if build.state == 'fail' %>
  (see <%= link_to 'build log', :controller => 'builds', :action => 'show', :id => build.id %>).
 <% else -%>
